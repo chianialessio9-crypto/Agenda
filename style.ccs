@@ -1,0 +1,388 @@
+:root{
+    --primary:#1976d2;
+    --background:#f5f7fa;
+    --card:#ffffff;
+    --border:#dfe3e8;
+    --text:#222;
+    --shadow:0 4px 12px rgba(0,0,0,.08);
+
+    --mattina:#2196F3;
+    --pomeriggio:#FF9800;
+    --sera:#9C27B0;
+    --notte:#37474F;
+    --riposo:#4CAF50;
+    --ferie:#009688;
+    --permesso:#795548;
+
+    --alessio:#2196F3;
+    --giada:#E91E63;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    sans-serif;
+
+    background:var(--background);
+    color:var(--text);
+    min-height:100vh;
+}
+
+header{
+    background:linear-gradient(
+        135deg,
+        #1976d2,
+        #0d47a1
+    );
+
+    color:white;
+
+    text-align:center;
+
+    padding:20px;
+
+    box-shadow:var(--shadow);
+}
+
+header h1{
+    font-size:1.6rem;
+    font-weight:700;
+}
+
+.container{
+    width:100%;
+    max-width:900px;
+    margin:auto;
+    padding:15px;
+}
+
+.card{
+    background:var(--card);
+    border-radius:15px;
+    padding:18px;
+    margin-bottom:15px;
+    box-shadow:var(--shadow);
+}
+
+.card h3{
+    margin-bottom:10px;
+    color:var(--primary);
+}
+
+label{
+    display:block;
+    margin-top:10px;
+    font-size:0.9rem;
+    font-weight:600;
+}
+
+input,
+select,
+textarea{
+    width:100%;
+    padding:12px;
+    margin-top:6px;
+    margin-bottom:8px;
+
+    border:1px solid var(--border);
+    border-radius:10px;
+
+    background:white;
+
+    font-size:15px;
+}
+
+input:focus,
+select:focus,
+textarea:focus{
+
+    outline:none;
+
+    border-color:var(--primary);
+
+    box-shadow:
+    0 0 0 3px rgba(25,118,210,.15);
+}
+
+button{
+
+    width:100%;
+
+    border:none;
+
+    border-radius:10px;
+
+    padding:12px;
+
+    background:var(--primary);
+
+    color:white;
+
+    font-size:15px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.2s;
+}
+
+button:hover{
+    transform:translateY(-1px);
+    opacity:.95;
+}
+
+button:active{
+    transform:scale(.98);
+}
+
+.evento{
+
+    color:white;
+
+    padding:10px;
+
+    border-radius:10px;
+
+    margin-top:8px;
+
+    position:relative;
+}
+
+.evento.mattina{
+    background:var(--mattina);
+}
+
+.evento.pomeriggio{
+    background:var(--pomeriggio);
+}
+
+.evento.sera{
+    background:var(--sera);
+}
+
+.evento.notte{
+    background:var(--notte);
+}
+
+.evento.riposo{
+    background:var(--riposo);
+}
+
+.evento.ferie{
+    background:var(--ferie);
+}
+
+.evento.permesso{
+    background:var(--permesso);
+}
+
+.alessio{
+    border-left:6px solid var(--alessio);
+}
+
+.giada{
+    border-left:6px solid var(--giada);
+}
+
+.rimuovi{
+
+    position:absolute;
+
+    top:8px;
+
+    right:10px;
+
+    cursor:pointer;
+
+    font-weight:bold;
+
+    font-size:18px;
+
+    color:white;
+}
+
+.rimuovi:hover{
+    opacity:.7;
+}
+
+.persona{
+
+    font-size:1rem;
+
+    font-weight:700;
+
+    margin-bottom:4px;
+}
+
+.data{
+    font-size:.9rem;
+}
+
+.orario{
+
+    font-weight:600;
+
+    margin-top:5px;
+}
+
+.titolo{
+    margin-top:5px;
+}
+
+.stats-grid{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(180px,1fr));
+
+    gap:12px;
+}
+
+.stat-box{
+
+    border-radius:10px;
+
+    padding:15px;
+
+    color:white;
+
+    text-align:center;
+}
+
+.stat-alessio{
+    background:#2196F3;
+}
+
+.stat-giada{
+    background:#E91E63;
+}
+
+.stat-numero{
+
+    font-size:2rem;
+
+    font-weight:bold;
+}
+
+.empty{
+    text-align:center;
+    color:#888;
+    padding:30px 0;
+}
+
+.calendario{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(7,1fr);
+
+    gap:6px;
+}
+
+.giorno{
+
+    background:white;
+
+    border-radius:10px;
+
+    min-height:120px;
+
+    padding:6px;
+
+    box-shadow:0 1px 3px rgba(0,0,0,.08);
+}
+
+.numero-giorno{
+
+    font-weight:700;
+
+    margin-bottom:5px;
+}
+
+.today{
+
+    border:2px solid var(--primary);
+}
+
+.badge{
+
+    display:inline-block;
+
+    padding:3px 8px;
+
+    border-radius:99px;
+
+    font-size:.75rem;
+
+    color:white;
+}
+
+.badge-m{
+    background:var(--mattina);
+}
+
+.badge-p{
+    background:var(--pomeriggio);
+}
+
+.badge-s{
+    background:var(--sera);
+}
+
+.badge-n{
+    background:var(--notte);
+}
+
+.footer{
+
+    text-align:center;
+
+    color:#777;
+
+    margin-top:20px;
+
+    font-size:.85rem;
+}
+
+@media (max-width:768px){
+
+    .container{
+        padding:10px;
+    }
+
+    .card{
+        padding:14px;
+    }
+
+    header h1{
+        font-size:1.3rem;
+    }
+
+    .calendario{
+        grid-template-columns:
+        repeat(2,1fr);
+    }
+}
+
+@media (max-width:480px){
+
+    .calendario{
+        grid-template-columns:1fr;
+    }
+
+    .giorno{
+        min-height:100px;
+    }
+}
