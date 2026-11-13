@@ -1,55 +1,187 @@
 <!DOCTYPE html>
 <html lang="it">
-
 <head>
+
     <meta charset="UTF-8">
 
     <meta
         name="viewport"
-        content="width=device-width, initial-scale=1, viewport-fit=cover">
+        content="width=device-width, initial-scale=1.0">
 
-    <title>Agenda Alessio & Giada</title>
+    <title>Turni Alessio & Giada</title>
 
     <meta
         name="theme-color"
-        content="#2563eb">
-
-    <meta
-        name="apple-mobile-web-app-capable"
-        content="yes">
-
-    <meta
-        name="apple-mobile-web-app-status-bar-style"
-        content="default">
-
-    <meta
-        name="apple-mobile-web-app-title"
-        content="Agenda">
+        content="#1976d2">
 
     <link
         rel="manifest"
         href="manifest.json">
 
     <link
-        rel="apple-touch-icon"
-        href="icons/icon-192.png">
-
-    <link
         rel="stylesheet"
         href="style.css">
+
 </head>
 
 <body>
 
-    <header class="app-header">
-        <h1>📅 Agenda Alessio & Giada</h1>
-        <p class="subtitle">
-            Turni e impegni condivisi
-        </p>
-    </header>
+<header>
 
-    <main>
+    <h1>
+        📅 Turni Alessio & Giada
+    </h1>
 
-        <section class="card">
+    <p>
+        Calendario condiviso per turni e impegni
+    </p>
 
-            <h2>Nuovo Evento
+</header>
+
+<div class="container">
+
+    <!-- FORM INSERIMENTO -->
+
+    <div class="card">
+
+        <h3>➕ Nuovo Impegno</h3>
+
+        <label for="data">
+            Data
+        </label>
+
+        <input
+            type="date"
+            id="data">
+
+        <label for="persona">
+            Persona
+        </label>
+
+        <select id="persona">
+
+            <option value="Alessio">
+                Alessio
+            </option>
+
+            <option value="Giada">
+                Giada
+            </option>
+
+        </select>
+
+        <label for="turno">
+            Turno
+        </label>
+
+        <select id="turno">
+
+            <option value="">
+                Seleziona turno
+            </option>
+
+            <option value="Mattina">
+                Mattina (07:00-13:00)
+            </option>
+
+            <option value="Pomeriggio">
+                Pomeriggio (13:00-19:00)
+            </option>
+
+            <option value="Sera">
+                Sera (19:00-00:00)
+            </option>
+
+            <option value="Notte">
+                Notte (00:00-07:00)
+            </option>
+
+            <option value="Riposo">
+                Riposo
+            </option>
+
+            <option value="Ferie">
+                Ferie
+            </option>
+
+            <option value="Permesso">
+                Permesso
+            </option>
+
+        </select>
+
+        <label for="oraInizio">
+            Dalle ore
+        </label>
+
+        <input
+            type="time"
+            id="oraInizio">
+
+        <label for="oraFine">
+            Alle ore
+        </label>
+
+        <input
+            type="time"
+            id="oraFine">
+
+        <label for="titolo">
+            Descrizione
+        </label>
+
+        <input
+            type="text"
+            id="titolo"
+            placeholder="Es. Servizio, Visita medica, Cena, Palestra...">
+
+        <button
+            type="button"
+            onclick="aggiungiEvento()">
+
+            Salva Impegno
+
+        </button>
+
+    </div>
+
+    <!-- STATISTICHE -->
+
+    <div class="card">
+
+        <h3>
+            📊 Statistiche
+        </h3>
+
+        <div id="stats">
+
+        </div>
+
+    </div>
+
+    <!-- ELENCO EVENTI -->
+
+    <div class="card">
+
+        <h3>
+            🗓️ Eventi Salvati
+        </h3>
+
+        <div id="listaEventi">
+
+        </div>
+
+    </div>
+
+</div>
+
+<footer class="footer">
+
+    Turni Alessio & Giada PWA
+
+</footer>
+
+<script src="app.js"></script>
+
+</body>
+</html>
